@@ -1,0 +1,152 @@
+.card-container {
+    width: auto;
+    height: 390px;
+    border-bottom: solid rgb(187, 57, 57);
+    margin-bottom: 6%;
+  }
+  
+  .Card-name{
+      
+      color:black;
+      font-size: medium;
+
+  }
+
+  
+  
+  .imageContainer{
+      position: relative;
+      width: 100%;
+      margin: auto;
+      padding: auto;
+      
+  }
+  
+  .imageContainer img{
+      width: 250px;
+      height: 180px;
+      position: relative;
+      border-radius: 10px;
+  }
+  
+   span {
+      grid-column: span 2;
+      border: 1.5px solid #c4af3d;
+      color: #c4af3d;
+      border-radius: 5px;
+      font-size: 13px;
+      padding: 2px;
+      font-weight: 500;
+  }
+  
+  h4 {
+      display: block;
+      font-size: 1em;
+      margin-block-start: 1.67em;
+      margin-block-end: 1.67em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+  }
+  
+  .imageRating{
+      border-radius: 10px 0 0 0;
+      position: absolute;
+      bottom: 4px;
+      right: 5px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #c4af3d;
+      background-color: rgba(0,0,0,.9);
+      padding: 0 5px;
+  }
+  
+  .card-descripcion{
+          text-align:justify;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          font-size:large;
+          display: flex;
+          width: 230px;
+          height: 200px;
+          text-size-adjust: 80%;
+  } 
+
+
+
+
+
+@media (max-width:560px ){
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 5px;
+        height: auto;
+        justify-content: center;
+        border-radius: 10px;
+      }
+
+      .imageRating{
+        border-radius: 10px 0 0 0;
+        position: absolute;
+        bottom: 3px;
+        right: 2px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #c4af3d;
+        background-color: rgba(0,0,0,.9);
+        padding: 0 5px;
+    }
+      
+
+      .card-container{
+        justify-content: center;
+        width: 100%;
+      }
+
+      .imageContainer{
+        max-width: 100%;
+        max-height: max-content;
+      }
+
+      .Card-name{
+        position: relative;
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+      }
+     
+      .imageContainer img{
+        position: relative;
+        width: 90%;
+        height: 20%;
+      }
+       
+      .imageRating{
+          border-radius: 10px 0 0 0;
+          position: absolute;
+          bottom: 4px;
+          right: 32px;
+          font-size: 25px;
+          font-weight: 500;
+          color: #c4af3d;
+          background-color: rgba(0,0,0,.9);
+          padding: 0 5px;
+      }
+      
+      .card-descripcion{
+              width: 90%;
+              text-align:justify;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              font-size:x-large;
+              display: flex;
+              padding: 30px;
+             
+              
+             
+      }  
+}
