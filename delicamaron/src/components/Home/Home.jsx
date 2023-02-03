@@ -6,6 +6,7 @@ import { getRecetas } from "../../actions";
 import Card from "../Card/Card"
 import Slider from "../Slider/Slider";
 import "./home.css"
+import Paginado from "../Paginado/Paginado";
 
 export default function Home(){
 const dispatch = useDispatch()
@@ -39,14 +40,13 @@ useEffect(()=>{
 
     return(
         <div className="Home-Container">
-          <div className="absoluto">
                     <Navbar/>
                     
-            </div>
+          
 
                
-       
-
+        
+        <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
 
         
         

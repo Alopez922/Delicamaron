@@ -1,0 +1,125 @@
+import React from "react";
+import { useState, useEffect } from "react";
+import {useDispatch, useSelector} from "react-redux"
+import  {Link, useNavigate} from "react-router-dom";
+import { CreateFood } from "../../actions";
+
+function validate(input){
+    const errors={}
+    // let regexName = new RegExp("^[a-zA-Z]{2,30}$");
+    if(!input.nombre){
+        errors.name = "Name is Invalid";
+    }else if (!input.precio){
+        errors.name = "precio is Required"
+    }else if (Number(input.precio)>5 || Number(input.precio)< 1 || isNaN(Number(input.precio))) {
+        errors.name = 'precio is invalid';
+    }else if(!input.descripcion){
+        errors.name = "descripcion is Required"
+    }
+    return errors
+    
+}
+
+export default function RecetaCreate(){
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+    const [input,setInput]=useState({
+        
+        nombre:"",
+        descripcion:"",
+        imagen:"",
+        precio:"",
+
+})
+const [errors,setErrors] = useState({});
+
+function handleChange(e){
+    
+    setInput({
+        ...input,
+        [e.target.name]:e.target.value
+        
+    })
+  
+    setErrors(validate({
+        ...input,
+        [e.target.name]:e.target.value
+    }))
+    
+}
+
+function handleSubmit(e){
+    e.preventDefault()
+    dispatch(CreateFood (input))
+
+    setInput({
+        nombre:"",
+        descripcion:"",
+        precio:"",
+        imagen: "",
+    })
+    alert("COMIDA CREADA CON EXITO")
+    navigate.push("/home")
+    window.location.reload()
+}
+
+
+
+const [disableButton, setDisableButton]=useState(true)
+
+useEffect(() => {
+   
+    if(input.nombre ===""||
+   
+    input.descripcion===""||
+    input.precio===""||
+    input.imagen === ""
+    )
+   {
+    setDisableButton(true)
+   }else{
+    setDisableButton(false)
+   }
+    
+  }, [errors,input,setDisableButton,dispatch]);
+
+    return(
+        <div className="contenedor">
+        <div className="fondoCreate">
+            <form  onSubmit={(e)=>handleSubmit()} className="form">
+                <div>
+                    <label>Nombre:</label>
+                    <input type="text"
+                    className={errors.name && "danger"} 
+                    name="nombre"
+                    // defaultValue={input.name}
+                    value={input.nombre}
+                    onChange={handleChange} 
+                    
+                    />
+                </div>
+                <div>
+                    <label>Precio:</label>
+                    <input type="number" step="0.1" min="1" max="5"  name="precio" onChange={handleChange} defaultValue={input.precio} className={errors.precio && "danger"} />
+                </div>
+                <div>
+                    <label>Descripcion:</label>
+                    <input type="text" name="descripcion" defaultValue={input.descripcion} onChange={handleChange} className={errors.descripcion && "danger"}/>
+                </div>
+                <div>
+                    <label>img:</label>
+                    <input type="text" name="imagen" onChange={handleChange}/>
+                </div>
+                <div className="botones-ordenados">  
+        <button type="submit" onClick={(e)=>handleSubmit(e)} disabled={disableButton}>Crear Receta</button>
+        <Link to="/home">
+        <button>Go Back</button>
+        </Link>
+      </div>
+            </form>
+            </div>
+            </div>
+    )
+
+
+}

@@ -13,6 +13,11 @@ const initialState = {
                 allrecetas:action.payload,
             }
 
+        case "CREATE_FOOD":
+            return{
+                ...state,
+              }
+
       
         
             default:

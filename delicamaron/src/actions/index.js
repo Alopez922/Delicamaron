@@ -11,10 +11,10 @@ export function getRecetas(){
     }
 }
 
-// export function getCamaron(payload){
-//     return{
-//         type:"GET_CAMARON",
-//         payload:payload
-//     }
-// }
+export function CreateFood(payload){
+    return async function(dispatch){
+        const response = await axios.post("http://localhost:3001/recetas",payload);
+        return response
+    }
+}
 

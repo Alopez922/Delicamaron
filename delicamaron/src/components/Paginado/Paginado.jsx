@@ -1,3 +1,7 @@
+import "./paginado.css"
+import Button from 'react-bootstrap/Button';
+
+
 export default function Paginado({recetasPerPage,allRecetas,paginado,setCurrentPage,currentPage}){
     
     
@@ -20,24 +24,29 @@ export default function Paginado({recetasPerPage,allRecetas,paginado,setCurrentP
     }
 
     return (
-        <nav className="paginador">
+        <div className="paginador">
                     
-            <ul className="number">
-                            <button onClick={(e)=>handlePrev(e)}>Prev</button> 
-                {pageNumbers && pageNumbers.map(number =>(
-                    
-                    <li className="number" key={number}> 
-                            
-                            <button onClick={()=>paginado(number)}> {number}  </button>
-    
-                    </li>
-                ))}
-                           
-                            <button onClick={(e)=>handlePrev(e)}>Next</button>
-                
+                <div className="prev">
+                <Button variant="light" size="lg" onClick={(e)=>handlePrev(e)}>Prev</Button>
+                </div>
 
-            </ul>
-        </nav>
+                <div className="next">
+                <Button variant="light" size="lg" onClick={(e)=>handlePrev(e)}>Next</Button>
+                </div>
+
+           
+        </div>
     )
 
 }
+
+
+//PAGINADO CON NUMEROS OSEA SIN NEXT Y PREVIOUS
+// {pageNumbers && pageNumbers.map(number =>(
+                    
+                    
+                         
+//     <button onClick={()=>paginado(number)}> {number}  </button>
+   
+
+// ))}                      

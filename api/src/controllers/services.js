@@ -37,7 +37,7 @@ const getDbInfo = async()=>{
 
 const recetaToDb = async(data)=>{
     try{
-        const {nombre,descripcion,imagen,precio,dietas} = data
+        const {nombre,descripcion,imagen,precio} = data
         const [receta,created] = await Receta.findOrCreate({
             where:{nombre},
             defaults:{

@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import Home from "./components/Home/Home.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RecetaCreate from './components/RecetaCreate/RecetaCreate';
 
 
 
@@ -12,7 +13,9 @@ function App() {
       
     <Routes>
       <Route path='/home' element={<Home/>}/>
+      <Route path='/create' element={<RecetaCreate/>}/>
 
+      
       </Routes>
     </div>
     </Router>
