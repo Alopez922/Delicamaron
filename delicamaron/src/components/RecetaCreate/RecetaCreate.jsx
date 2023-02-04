@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux"
 import  {Link, useNavigate} from "react-router-dom";
 import { CreateFood } from "../../actions";
+import axios from "axios"
+
 
 function validate(input){
     const errors={}
@@ -59,7 +61,6 @@ function handleSubmit(e){
         imagen: "",
     })
     alert("COMIDA CREADA CON EXITO")
-    navigate.push("/home")
     window.location.reload()
 }
 
@@ -72,8 +73,7 @@ useEffect(() => {
     if(input.nombre ===""||
    
     input.descripcion===""||
-    input.precio===""||
-    input.imagen === ""
+    input.precio===""
     )
    {
     setDisableButton(true)
@@ -82,6 +82,38 @@ useEffect(() => {
    }
     
   }, [errors,input,setDisableButton,dispatch]);
+
+  const [file, setFile] = useState(null);
+
+function handleFileChange(e) {
+    setFile(e.target.files[0]);
+}
+
+async function handleSubmit(e) {
+    e.preventDefault();
+    if (!file) {
+        return;
+    }
+
+    // Aquí subes el archivo a Cloudinary
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "Delicamaron");
+    const res = await axios.post("https://api.cloudinary.com/v1_1/deldonynt/image/upload", formData);
+    const imageURL = res.data.secure_url;
+
+    // Aquí guardas la URL en tu base de datos
+    dispatch(CreateFood({ ...input, imagen: imageURL }));
+    setInput({
+        nombre: "",
+        descripcion: "",
+        precio: "",
+        imagen: "",
+    });
+    alert("COMIDA CREADA CON EXITO");
+    window.location.reload();
+}
+
 
     return(
         <div className="contenedor">
@@ -106,10 +138,13 @@ useEffect(() => {
                     <label>Descripcion:</label>
                     <input type="text" name="descripcion" defaultValue={input.descripcion} onChange={handleChange} className={errors.descripcion && "danger"}/>
                 </div>
+               
                 <div>
-                    <label>img:</label>
-                    <input type="text" name="imagen" onChange={handleChange}/>
-                </div>
+            <label>img:</label>
+            <input type="file" name="imagen" onChange={handleFileChange} />
+            </div>
+
+
                 <div className="botones-ordenados">  
         <button type="submit" onClick={(e)=>handleSubmit(e)} disabled={disableButton}>Crear Receta</button>
         <Link to="/home">
