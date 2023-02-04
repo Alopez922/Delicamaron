@@ -75,9 +75,27 @@ const updateReceta = async(req,res,next)=>{
     .catch((error)=>next(error))
 }
 
+const deleteReceta = async(req,res)=>{
+    const {id}= req.params;
+    if(isNaN(id)){
+        const deleteResponse = await Receta.destroy({
+            where:{id:id}
+        });
+        getAllInfo()
+        if(deleteResponse){
+            return res.status(200).json("Receta Deleted SuccessFull")
+        }else{
+            return res.status(404).send("Receta Not Found")
+        }
+    }else{
+        return res.status(404).send("Invalid id")
+    }
+}
+
 module.exports={
     recetaToDb,
     getDbInfo,
     getAllInfo,
-    updateReceta
+    updateReceta,
+    deleteReceta
 }
