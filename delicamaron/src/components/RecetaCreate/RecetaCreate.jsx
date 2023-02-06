@@ -27,7 +27,6 @@ function validate(input){
 
 export default function RecetaCreate(){
     const dispatch = useDispatch();
-    const navigate = useNavigate()
     const [input,setInput]=useState({
         
         nombre:"",
@@ -150,7 +149,11 @@ async function handleSubmit(e) {
                     <label>Descripcion:</label>
                     <input type="text" name="descripcion" defaultValue={input.descripcion} onChange={handleChange} className={errors.descripcion && "danger"}/>
                 </div>
-               
+                
+                <div> 
+                {preview && <img src={preview} width="250px" height="200px" alt="preview" style={{borderRadius: "20px",  boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.3)",
+    border: "1px solid transparent"}} />}
+                </div>
                 <div>
                 <label>img:</label>
                 <input type="file" name="imagen" onChange={handleFileChange} />
