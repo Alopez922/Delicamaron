@@ -1,6 +1,8 @@
 .paginador{
     display: flex;
     justify-content: center;
+    font-family: 'Itim', cursive;
+
 }
 
 .prev{
