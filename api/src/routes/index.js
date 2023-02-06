@@ -12,7 +12,7 @@ const router = Router()
 router.get("/recetas",getRecetas)
 router.post("/recetas",postReceta)
 router.put("/receta/:id",updateReceta)
-router.delete("/receta/delete/:id",deleteReceta)
+router.delete("/recetas/delete/:id",deleteReceta)
 
 
 module.exports=router;
