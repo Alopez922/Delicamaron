@@ -44,9 +44,10 @@ useEffect(()=>{
                     
           
 
-               
-        
-        <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+           <div className="paginado-home"> 
+           <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+  
+          </div>
 
         
         

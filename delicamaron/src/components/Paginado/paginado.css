@@ -8,3 +8,9 @@
 }
 
 
+@media (max-width:700px ){
+   .paginador{
+    justify-content: center;
+    align-items: center;
+   } 
+}

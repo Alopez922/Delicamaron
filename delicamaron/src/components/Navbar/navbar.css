@@ -1,4 +1,8 @@
 .slider.hidden {
     visibility: hidden;
   }
+
+  .slider{
+    padding: 35px;
+  }
   
