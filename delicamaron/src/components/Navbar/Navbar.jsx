@@ -17,9 +17,9 @@ import "./navbar.css"
   return(
     <>
       <NavContainer>
-        
+          <div className="imagen">
           <img  src={logo} alt="" />
-          
+          </div>
        
         
         <div className={`links ${clicked ? "active":""}`}>
