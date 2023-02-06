@@ -17,7 +17,7 @@ import "./navbar.css"
   return(
     <>
       <NavContainer>
-          <div className="imagen">
+          <div className="logo-imagen">
           <img  src={logo} alt="" />
           </div>
        

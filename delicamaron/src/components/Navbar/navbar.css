@@ -8,8 +8,10 @@
       padding-top: 20px;
     }
 
-    .imagen{
-      height: -250px;
-      padding-left: 70px;
+    .logo-imagen{
+      justify-content: center;
+      margin-top: 10px;
+      margin-left: 3rem;
     }
+
   }
