@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Slider from "../Slider/Slider";
 import BurguerButton from "./BurguerButton";
 import logo from "../../utils/imagenes/logo2.png"
+import "./navbar.css"
 
  function Navbar(){
   const [clicked, setClicked] = useState(false)
@@ -33,9 +34,10 @@ import logo from "../../utils/imagenes/logo2.png"
         </div>
         <BgDiv className={`initial ${clicked ? "active": ""}`}> </BgDiv>
       </NavContainer>
-      <div className="slider">
-      <Slider/>
-      </div>
+      
+      <div className={`slider ${clicked ? "hidden" : ""}`}>
+        <Slider />
+       </div>
     
     </>
   )

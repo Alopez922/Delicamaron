@@ -4,6 +4,9 @@ import {useDispatch, useSelector} from "react-redux"
 import  {Link, useNavigate} from "react-router-dom";
 import { CreateFood } from "../../actions";
 import axios from "axios"
+import "./recetaCreate.css"
+import logo from "../../utils/imagenes/logo2.png"
+
 
 
 function validate(input){
@@ -65,6 +68,10 @@ function handleSubmit(e){
 }
 
 
+const [preview, setPreview] = useState(null);
+
+
+
 
 const [disableButton, setDisableButton]=useState(true)
 
@@ -87,6 +94,7 @@ useEffect(() => {
 
 function handleFileChange(e) {
     setFile(e.target.files[0]);
+    setPreview(URL.createObjectURL(file));
 }
 
 async function handleSubmit(e) {
@@ -119,6 +127,10 @@ async function handleSubmit(e) {
         <div className="contenedor">
         <div className="fondoCreate">
             <form  onSubmit={(e)=>handleSubmit()} className="form">
+                <div className="logo-deli">
+                    <img src={logo} alt=""  width="200"/>
+                </div>
+                
                 <div>
                     <label>Nombre:</label>
                     <input type="text"
@@ -140,9 +152,11 @@ async function handleSubmit(e) {
                 </div>
                
                 <div>
-            <label>img:</label>
-            <input type="file" name="imagen" onChange={handleFileChange} />
-            </div>
+                <label>img:</label>
+                <input type="file" name="imagen" onChange={handleFileChange} />
+                </div>
+
+
 
 
                 <div className="botones-ordenados">  

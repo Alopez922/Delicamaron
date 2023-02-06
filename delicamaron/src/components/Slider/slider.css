@@ -1,6 +1,6 @@
 .imagen{
     justify-content: center;
-    padding: 20px;
+    padding: 18px;
     position: relative;
     margin: auto;
 }
@@ -15,28 +15,3 @@
 
 
 
-@media (max-width:700px){
-
-    
-.imagen img{
-    width: 100%;
-}
-
-.descripcion h3{
-    margin-left: 0%;
-    background:  rgba(0,0,0,0.5);
-    width: 100%;
-}
-}
-
-/* @media (max-width:900px ){
-    .imagen{
-        justify-content: center;
-    }
-
-    .descripcion h3{
-        margin-left: 8%;
-        background:  rgba(0,0,0,0.5);
-        max-width: 100%; 
-    }
-    } */
