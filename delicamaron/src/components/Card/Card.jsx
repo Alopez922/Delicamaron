@@ -10,7 +10,7 @@ export default function Card({nombre,imagen,descripcion,precio,id}){
                 </h4>
             <Link to={`/recetas/`+id}> 
             <div className="imageContainer">
-            <img src={imagen} alt="Img Not Found" width="150px" height="200px"  />
+            <img src={imagen} alt="Img Not Found"  />
             <div className="imageRating">★${precio}</div>
             </div>
             </Link>
