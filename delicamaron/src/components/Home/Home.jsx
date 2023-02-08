@@ -4,9 +4,9 @@ import {useDispatch, useSelector} from "react-redux";
 import Navbar from "../Navbar/Navbar";
 import { getRecetas } from "../../actions";
 import Card from "../Card/Card"
-import Slider from "../Slider/Slider";
 import "./home.css"
 import Paginado from "../Paginado/Paginado";
+
 
 export default function Home(){
 const dispatch = useDispatch()

@@ -9,13 +9,10 @@
 .positions {
     display: grid;
     justify-items:center;
-    grid-template-columns: repeat(2, 2fr); 
+    grid-template-columns: repeat(3, 2fr); 
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     position: sticky;
-    margin-top: 3ex;
-    padding-bottom: 10%;
-    padding-bottom: 14.9%; 
     
 }
 
