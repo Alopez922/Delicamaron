@@ -16,7 +16,7 @@ export default function Slider() {
                         // className="d-block w-100"
                         src={arroz}
                         alt="First slide" />
-                    <Carousel.Caption className='carousel-descripcion'>
+                    <Carousel.Caption className='descripcion'>
                         <h3>Arroz de Camaron</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -25,7 +25,7 @@ export default function Slider() {
                         // className="d-block w-100"
                         src={huevas}
                         alt="Second slide" />
-                    <Carousel.Caption className='carousel-descripcion'>
+                    <Carousel.Caption className='descripcion'>
                         <h3>Huevas de Pescao</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -34,7 +34,7 @@ export default function Slider() {
                         // className="d-block w-100"
                         src={coctel}
                         alt="Third slide" />
-                    <Carousel.Caption className='carousel-descripcion'>
+                    <Carousel.Caption className='descripcion'>
                         <h3>Coctel de Camaron</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -43,7 +43,7 @@ export default function Slider() {
                         // className="d-block w-100"
                         src={fix}
                         alt="Third slide" />
-                    <Carousel.Caption className='carousel-descripcion'>
+                    <Carousel.Caption className='descripcion'>
                         <h3>Fish and Ships</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -53,7 +53,7 @@ export default function Slider() {
                         // className="d-block w-100"
                         src={ajillo}
                         alt="Third slide" />
-                    <Carousel.Caption className='carousel-descripcion'>
+                    <Carousel.Caption className='descripcion'>
                         <h3>Camarones al Ajillo</h3>
                     </Carousel.Caption>
                 </Carousel.Item>

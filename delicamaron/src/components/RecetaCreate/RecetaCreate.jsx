@@ -16,10 +16,10 @@ function validate(input){
         errors.name = "Name is Invalid";
     }else if (!input.precio){
         errors.name = "precio is Required"
-    }else if (Number(input.precio)>5 || Number(input.precio)< 1 || isNaN(Number(input.precio))) {
+    }else if (Number(input.precio)> 100000 || Number(input.precio)< 1 || isNaN(Number(input.precio))) {
         errors.name = 'precio is invalid';
     }else if(!input.descripcion){
-        errors.name = "descripcion is Required"
+        errors.name = "descripcion is very longer"
     }
     return errors
     
@@ -79,6 +79,7 @@ useEffect(() => {
     if(input.nombre ===""||
    
     input.descripcion===""||
+    input.descripcion.length > 250 ||
     input.precio===""
     )
    {
@@ -143,7 +144,7 @@ async function handleSubmit(e) {
                 </div>
                 <div>
                     <label>Precio:</label>
-                    <input type="number" step="0.1" min="1" max="5"  name="precio" onChange={handleChange} defaultValue={input.precio} className={errors.precio && "danger"} />
+                    <input type="number" step="1000" min="1000" max="100000"  name="precio" onChange={handleChange} defaultValue={input.precio} className={errors.precio && "danger"} />
                 </div>
                 <div>
                     <label>Descripcion:</label>
@@ -164,7 +165,7 @@ async function handleSubmit(e) {
 
                 <div className="botones-ordenados">  
         <button type="submit" onClick={(e)=>handleSubmit(e)} disabled={disableButton}>Crear Receta</button>
-        <Link to="/home">
+        <Link to="/">
         <button>Go Back</button>
         </Link>
       </div>

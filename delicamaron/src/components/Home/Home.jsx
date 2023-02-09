@@ -1,9 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux";
-import Navbar from "../Navbar/Navbar";
+import Navreact from "../Navbar/Navbar";
 import { getRecetas } from "../../actions";
-import Card from "../Card/Card"
+import Card from "../Card/Card";
+import Slider from "../Slider/Slider"
 import "./home.css"
 import Paginado from "../Paginado/Paginado";
 
@@ -40,17 +41,12 @@ useEffect(()=>{
 
     return(
         <div className="Home-Container">
-                    <Navbar/>
-                    
-          
-
-           <div className="paginado-home"> 
-           <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
-  
-          </div>
-
+                    <Navreact/>
+                    <Slider/>
         
-        
+        <div className="menu-text">
+          <h1>MENU</h1>
+        </div>
         <div className="positions">
         {
   currentRecetas.length>0?
@@ -66,8 +62,12 @@ useEffect(()=>{
   }
         </div>
         
+        
+           <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+  
+          </div>
        
-        </div>
+        
     )
 }
 
