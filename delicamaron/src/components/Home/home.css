@@ -24,12 +24,22 @@
 }
 
 .menu-text{
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    border-bottom: solid black;
+    border-top: solid black;
+    justify-content: center;
+    background: url("https://img.freepik.com/foto-gratis/papel-sobre-fondo-marco-fuego_1409-1355.jpg");
+    box-shadow: 0 7px 7px rgb(45, 7, 151)
 }
 
 .menu-text h1{
-    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(241, 239, 239);
+    /* background-color: rgba(255, 255, 255, 0.3); */
     font-size: xx-large;
+    padding: 40px;
+    text-shadow: 2px 2px rgb(5, 18, 202);
+
 }
 
 /* .paginado{

@@ -44,8 +44,10 @@ useEffect(()=>{
                     <Navreact/>
                     <Slider/>
         
+      
+
         <div className="menu-text">
-          <h1>MENU</h1>
+          <h1>MENU DELICAMARON</h1>
         </div>
         <div className="positions">
         {
