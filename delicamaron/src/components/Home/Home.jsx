@@ -49,6 +49,8 @@ useEffect(()=>{
         <div className="menu-text">
           <h1>MENU DELICAMARON</h1>
         </div>
+
+        <div className="fondo-carta">
         <div className="positions">
         {
   currentRecetas.length>0?
@@ -68,7 +70,7 @@ useEffect(()=>{
            <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
   
           </div>
-       
+       </div>
         
     )
 }

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./card.css"
 
 export default function Card({nombre,imagen,descripcion,precio,id}){
-    const [isExpanded, setIsExpanded] = useState(false);
 
     return(
         <div className="card-container">
@@ -19,9 +18,7 @@ export default function Card({nombre,imagen,descripcion,precio,id}){
               <div className="card-descripcion">
               <p>{descripcion}</p> 
               </div>
-              <button onClick={() => setIsExpanded(!isExpanded)}>
-        {isExpanded ? 'Mostrar Menos' : 'Mostrar Más'}
-      </button>
+          
            
         </div>
     )

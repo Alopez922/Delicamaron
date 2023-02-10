@@ -79,7 +79,7 @@ useEffect(() => {
     if(input.nombre ===""||
    
     input.descripcion===""||
-    input.descripcion.length > 250 ||
+    input.descripcion.length > 140 ||
     input.precio===""
     )
    {

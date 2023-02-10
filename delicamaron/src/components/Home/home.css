@@ -7,6 +7,7 @@
      justify-content: center;
      align-items: center;
      margin: auto;
+     background: url("https://media.istockphoto.com/id/1352152504/es/vector/papel-negro-oscuro-abstracto-fondo-geom%C3%A9trico-cortado-fondo-futurista-moderno-se-puede-usar.jpg?s=612x612&w=0&k=20&c=WcJQBCdFP2jUSRtvxJcnuwa5PO3OjGJcvLM6Tvkox7Q=");
     }
 
 
@@ -30,15 +31,18 @@
     border-top: solid black;
     justify-content: center;
     background: url("https://img.freepik.com/foto-gratis/papel-sobre-fondo-marco-fuego_1409-1355.jpg");
-    box-shadow: 0 7px 7px rgb(45, 7, 151)
+    /* box-shadow: 0 7px 7px rgb(190, 182, 211) */
+    box-shadow: 0 7px 7px rgb(190, 182, 211), 0 -7px 7px rgb(190, 182, 211);
+
 }
 
 .menu-text h1{
-    color:rgb(241, 239, 239);
+    /* color:rgb(241, 239, 239); */
+    color: rgb(231, 255, 14);
     /* background-color: rgba(255, 255, 255, 0.3); */
     font-size: xx-large;
     padding: 40px;
-    text-shadow: 2px 2px rgb(5, 18, 202);
+    text-shadow: 2px 2px rgb(183, 230, 13);
 
 }
 

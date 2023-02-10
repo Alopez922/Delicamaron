@@ -8,13 +8,15 @@ import logo from "../../utils/imagenes/logo2.png"
 
 export default function Navreact(){
 return(
-  <Navbar className='nav-container' bg="light" expand="lg">
+  <Navbar className='nav-container' bg="dark" expand="lg">
 
     <Container>
       
   <Navbar.Brand className='titulo-nav' href="/">
   <img className='logo-img' width="100px" src={logo} alt="" />
-   Delicamaron
+  
+   <strong className='strong-text'>Delicamaron</strong> 
+  
   </Navbar.Brand>
     </Container>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />

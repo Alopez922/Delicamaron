@@ -9,5 +9,15 @@
     margin-right: 15px;
 }
 
+.nav-container .nav-link, .nav-container .titulo-nav {
+    color: rgb(231, 255, 14);
+}
 
+.nav-container .nav-link svg {
+    fill: rgb(231, 255, 14);
+}
+
+.strong-text{
+    letter-spacing: 4px;
+}
 
