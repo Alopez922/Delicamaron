@@ -5,6 +5,7 @@ import Navreact from "../Navbar/Navbar";
 import { getRecetas } from "../../actions";
 import Card from "../Card/Card";
 import Slider from "../Slider/Slider"
+import Footer from "../Footer/Footer"
 import "./home.css"
 import Paginado from "../Paginado/Paginado";
 
@@ -70,6 +71,8 @@ useEffect(()=>{
            <Paginado recetasPerPage={recetasPerPage} allRecetas={allRecetas.length}  paginado={paginado} setCurrentPage={setCurrentPage} currentPage={currentPage} />
   
           </div>
+
+          <Footer/>
        </div>
         
     )

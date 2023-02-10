@@ -4,11 +4,15 @@ import {MdLocalDrink} from "react-icons/md";
 import {FiPhone} from "react-icons/fi";
 import "./navbar.css"
 import logo from "../../utils/imagenes/logo2.png"
+import {AiFillHome} from "react-icons/ai"
 
 
 export default function Navreact(){
+  const handleContactClick = () => {
+    window.open("https://wa.me/message/LOR4YF4MCD7GP1", "_blank");
+  };
 return(
-  <Navbar className='nav-container' bg="dark" expand="lg">
+  <Navbar className='nav-container' bg="light" expand="lg">
 
     <Container>
       
@@ -16,16 +20,15 @@ return(
   <img className='logo-img' width="100px" src={logo} alt="" />
   
    <strong className='strong-text'>Delicamaron</strong> 
-  
   </Navbar.Brand>
     </Container>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Container>
     <Nav className="mr-auto">
-      <Nav.Link href="#home"><GoHome /> Home</Nav.Link>
-      <Nav.Link href="#link"><MdLocalDrink/>  Bebidas</Nav.Link>
-      <Nav.Link><FiPhone/> Contacto </Nav.Link>
+      <Nav.Link href="/"><AiFillHome/> Home</Nav.Link>
+      <Nav.Link href="/bebidas"><MdLocalDrink/>  Bebidas</Nav.Link>
+      <Nav.Link onClick={handleContactClick}><FiPhone/> Contacto </Nav.Link>
     </Nav>
     </Container>
     
