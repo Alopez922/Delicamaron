@@ -6,6 +6,10 @@
     
 }
 
+.custom-toggle {
+    background-color: yellow !important;
+  }
+
 .logo-img{
     margin-left: 10px;
     margin-right: 15px;

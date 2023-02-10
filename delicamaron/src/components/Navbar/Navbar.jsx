@@ -22,7 +22,7 @@ return(
    <strong className='strong-text'>Delicamaron</strong> 
   </Navbar.Brand>
     </Container>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggle" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Container>
     <Nav className="mr-auto">
