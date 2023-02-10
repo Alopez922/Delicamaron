@@ -27,11 +27,11 @@ export default function Paginado({recetasPerPage,allRecetas,paginado,setCurrentP
         <div className="paginador">
                     
                 <div className="prev">
-                <Button variant="outline-primary" size="lg" onClick={(e)=>handlePrev(e)}>Prev</Button>
+                <Button variant="dark" size="lg" onClick={(e)=>handlePrev(e)}>Prev</Button>
                 </div>
 
                 <div className="next">
-                <Button variant="outline-primary" size="lg" onClick={(e)=>handlePrev(e)}>Next</Button>
+                <Button variant="dark" size="lg" onClick={(e)=>handlePrev(e)}>Next</Button>
                 </div>
 
            
