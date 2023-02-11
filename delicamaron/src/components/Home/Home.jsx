@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import Navreact from "../Navbar/Navbar";
 import { getRecetas } from "../../actions";
 import Card from "../Card/Card";
-import Slider from "../Slider/Slider"
+import Sliders from "../Slider/Slider"
 import Footer from "../Footer/Footer"
 import "./home.css"
 import Paginado from "../Paginado/Paginado";
@@ -43,7 +43,7 @@ useEffect(()=>{
     return(
         <div className="Home-Container">
                     <Navreact/>
-                    <Slider/>
+                    <Sliders/>
         
       
 

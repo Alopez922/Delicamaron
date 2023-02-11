@@ -7,7 +7,7 @@ import fix from "../../utils/imagenes/fishAndShips.jfif"
 import ajillo from "../../utils/imagenes/ajillo.jfif"
 import "./slider.css"
 
-export default function Slider() {
+export default function Sliders() {
     return (
         <>
             <Carousel className='imagen' >
