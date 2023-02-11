@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Form,} from "react-router-dom";
 import Home from "./components/Home/Home.jsx"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RecetaCreate from "./components/RecetaCreate/RecetaCreate.jsx"
+import Bebidas from './components/Bebidas/Bebidas';
+import Nosotros from './components/Nosotros/Nosotros';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/create' element={<RecetaCreate/> }/>
+      <Route path="/bebidas" element={<Bebidas/>}/>
+      <Route path="/nosotros" element={<Nosotros/>} />
 
       
       </Routes>

@@ -1,5 +1,4 @@
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Container } from 'react-bootstrap';
-import { GoHome } from 'react-icons/go';
 import {MdLocalDrink} from "react-icons/md";
 import {FiPhone} from "react-icons/fi";
 import "./navbar.css"

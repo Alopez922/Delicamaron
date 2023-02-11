@@ -2,6 +2,7 @@ const initialState = {
     recetas: [],
     allrecetas:[],
     camarones:[],
+    bebidas:[],
   };
 
   function rootReducer(state = initialState,action){
@@ -17,6 +18,16 @@ const initialState = {
             return{
                 ...state,
               }
+        case "GET_BEBIDAS":
+            return{
+              ...state,
+              bebidas:action.payload
+            }
+
+        case "CREATE_BEBIDAS":
+              return{
+                  ...state,
+                }
 
       
         
