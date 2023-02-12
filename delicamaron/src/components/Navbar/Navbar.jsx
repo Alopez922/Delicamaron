@@ -4,6 +4,8 @@ import {FiPhone} from "react-icons/fi";
 import "./navbar.css"
 import logo from "../../utils/imagenes/logo2.png"
 import {AiFillHome} from "react-icons/ai"
+import {FaUsers} from "react-icons/fa"
+import {IoLogoWhatsapp} from "react-icons/io"
 
 
 export default function Navreact(){
@@ -14,7 +16,7 @@ return(
   <Navbar className='nav-container' bg="light" expand="lg">
 
     <Container>
-      
+    
   <Navbar.Brand className='titulo-nav' href="/">
   <img className='logo-img' width="100px" src={logo} alt="" />
   
@@ -27,7 +29,8 @@ return(
     <Nav className="mr-auto">
       <Nav.Link href="/"><AiFillHome/> Home</Nav.Link>
       <Nav.Link href="/bebidas"><MdLocalDrink/>  Bebidas</Nav.Link>
-      <Nav.Link onClick={handleContactClick}><FiPhone/> Contacto </Nav.Link>
+      <Nav.Link onClick={handleContactClick}><IoLogoWhatsapp/>Contacto </Nav.Link>
+      <Nav.Link href='/nosotros'><FaUsers/>Conocenos</Nav.Link>
     </Nav>
     </Container>
     
