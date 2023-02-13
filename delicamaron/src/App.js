@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RecetaCreate from "./components/RecetaCreate/RecetaCreate.jsx"
 import Bebidas from './components/Bebidas/Bebidas';
 import Nosotros from './components/Nosotros/Nosotros';
+import BebidaCreate from './components/BebidaCreate/BebidaCreate';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path='/create' element={<RecetaCreate/> }/>
       <Route path="/bebidas" element={<Bebidas/>}/>
       <Route path="/nosotros" element={<Nosotros/>} />
+      <Route path='/createBebi' element={<BebidaCreate/> } />
 
       
       </Routes>
